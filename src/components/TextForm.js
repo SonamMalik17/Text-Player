@@ -19,8 +19,9 @@ export default function TextForm(props) {
     setText("");
   };
   const handleCopyClick = () => {
-    console.log("Copy was clicked");
-    navigator.clipboard.writeText(text);
+    var text=document.getElementById("myBox");
+    text.select();
+    navigator.clipboard.writeText(text.value);
   };
   const handleReverseClick = () => {
     let newString = "";
