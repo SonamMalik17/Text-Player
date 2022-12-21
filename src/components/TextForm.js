@@ -5,28 +5,34 @@ export default function TextForm(props) {
   const handleUpClick = () => {
     let newText = text.toUpperCase();
     setText(newText);
+    props.showAlert("Converted to Uppercase!",'success');
   };
   const handleLowClick = () => {
     let newText = text.toLowerCase();
     setText(newText);
+    props.showAlert("Converted to Lowercase!",'success');
   };
   const handleTrimClick = () => {
     let regexPattern = /\s+/g;
     let newText = text.replace(regexPattern, " ");
     setText(newText);
+    props.showAlert("Extra spaces are removed!",'success');
   };
   const handleClearClick = () => {
     setText("");
+    props.showAlert("Textbox is cleared!",'success');
   };
   const handleCopyClick = () => {
     var text=document.getElementById("myBox");
     text.select();
     navigator.clipboard.writeText(text.value);
+    props.showAlert("Copied to Clipboard!",'success');
   };
   const handleReverseClick = () => {
     let newString = "";
     for (let i = text.length - 1; i >= 0; i--) newString += text[i];
     setText(newString);
+    props.showAlert("Text is Reversed!",'success');
   };
   const handleSpeakClick = () => {
     let msg = new SpeechSynthesisUtterance(text);
@@ -40,10 +46,12 @@ export default function TextForm(props) {
         window.speechSynthesis.cancel();
       }
     }
+    props.showAlert("Reciting the entered text!",'success');
   };
   const handleUndoClick = () => {
     let newText = text.substring(0, text.length - 1);
     setText(newText);
+    props.showAlert("Backspaced!",'success');
   };
   const handleDownloadClick = () => {
     const element = document.createElement("a");
@@ -53,10 +61,12 @@ export default function TextForm(props) {
     element.href = URL.createObjectURL(file);
     element.download = "myFile.txt";
     element.click();
+    props.showAlert("Text is Downloaded!",'success');
   };
   const handleParagraphClick = () => {
     let newText = text.replaceAll(".", ".\n");
     setText(newText);
+    props.showAlert("One sentence, each line!",'success');
   };
   const handleOppositeClick = () => {
     let newText = text
@@ -70,6 +80,7 @@ export default function TextForm(props) {
       })
       .join("");
     setText(newText);
+    props.showAlert("Text is Alternated!",'success');
   };
   const handleCapitalizeSClick = () => {
     if (window.getSelection) {
@@ -79,6 +90,7 @@ export default function TextForm(props) {
         setText(newText);
       }
     }
+    props.showAlert("Converted the Selected text to Uppercase!",'success');
   };
   const handleSearchClick = () => {
     let str = prompt("Enter the string you wanna Search :");
@@ -88,10 +100,12 @@ export default function TextForm(props) {
     } else {
       setText("the string " + str + " is not present..");
     }
+    props.showAlert("Searched a String!",'success');
   };
   const handleVowelClick = () => {
     let newText = text.match(/[aeiou]/gi).length;
     setText(newText);
+    props.showAlert("Counted the no. of vowels present in the text!s",'success');
   };
   const handleReplaceClick = () => {
     let repval = prompt("Enter the word to be replaced:");
@@ -99,6 +113,7 @@ export default function TextForm(props) {
     let toreplace = prompt("Enter the text that you want to replace with:");
     let newText = text.replace(tobereplaced, toreplace);
     setText(newText);
+    props.showAlert("One String is replaced by another String!",'success');
   };
   const handleOnChange = (event) => {
     setText(event.target.value);
