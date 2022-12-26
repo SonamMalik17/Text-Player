@@ -24,11 +24,19 @@ function App() {
       // document.body.style.backgroundColor='#273443';
       document.body.style.backgroundColor='#1c2630';
       showAlert("Dark mode has been enabled!",'success');
+      document.title='Text Player - Dark mode';
+      // setInterval(()=>{
+      //   document.title='Text Player is amazing';
+      // }, 2000);
+      // setInterval(()=>{
+      //   document.title='Install Text Player now';
+      // }, 3000);
     }
     else{
       setMode('light');
       document.body.style.backgroundColor='white'; 
-      showAlert("Light mode has been enabled!",'success'); 
+      showAlert("Light mode has been enabled!",'success');
+      document.title='Text Player - Light mode'; 
     }
   }
   return (
