@@ -1,11 +1,11 @@
 import "./App.css";
-import About from "./components/About";
+// import About from "./components/About";
 import Navbar from "./components/Navbar";
 import TextForm from "./components/TextForm";
 import React, { useState } from "react";
 import Alert from "./components/Alert";
 
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+// import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 function App() {
   const [mode, setMode] = useState("light");
   const [alert, setAlert] = useState(null);
@@ -41,7 +41,7 @@ function App() {
   };
   return (
     <>
-      <Router>
+      {/* <Router> */}
         <Navbar
           title="Text Player"
           aboutText="About"
@@ -52,24 +52,24 @@ function App() {
         {/* <Navbar/> */}
         {/* <Navbar title='Text Player'/> */}
         <div className="container my-3">
-          <Routes>
-            <Route exact path="/about" element={<About />} />
-            <Route
+          {/* <Routes> */}
+            {/* <Route exact path="/about" element={<About />} /> */}
+            {/* <Route
               exact
               path="/"
-              element={
+              element={ */}
                 <TextForm
                   showAlert={showAlert}
                   heading="Enter text to be analyzed below : "
                   mode={mode}
                 />
-              }
-            />
-          </Routes>
+              {/* }
+            /> */}
+          {/* </Routes> */}
           {/* document.style.backgroundColor='#ccffff'; */}
           {/* document.body.style.backgroundColor='#66e0ff';  */}
         </div>
-      </Router>
+      {/* </Router> */}
     </>
   );
 }
