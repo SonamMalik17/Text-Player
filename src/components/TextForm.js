@@ -132,7 +132,7 @@ export default function TextForm(props) {
             rows="8"
           ></textarea>
         </div>
-        <button className={`btn btn-${props.mode==='light'? 'primary' : 'outline-light'}`} 
+        <button className={`mt-2 btn btn-${props.mode==='light'? 'primary' : 'outline-light'}`} 
         // style={{hover:   }} 
         onClick={handleUpClick}>
           Convert to Uppercase
@@ -140,56 +140,56 @@ export default function TextForm(props) {
         {/* <button className={`btn btn-${props.mode==='light'? 'primary' : 'outline-light'} text-${props.mode==='dark'? 'light':'dark'} mx-1`} onClick={handleLowClick}>
           Convert to Lowercase
         </button> */}
-        <button className={`btn btn-${props.mode==='light'? 'primary' : 'outline-light'} mx-1`} onClick={handleLowClick}>
+        <button className={`mt-2 btn btn-${props.mode==='light'? 'primary' : 'outline-light'} mx-2`} onClick={handleLowClick}>
           Convert to Lowercase
         </button>
-        <button className={`btn btn-${props.mode==='light'? 'primary' : 'outline-light'}`} onClick={handleTrimClick}>
+        <button className={`mt-2 btn btn-${props.mode==='light'? 'primary' : 'outline-light'}`} onClick={handleTrimClick}>
           Trim Whitespaces
         </button>
-        <button className={`btn btn-${props.mode==='light'? 'primary' : 'outline-light'} mx-1`} onClick={handleClearClick}>
+        <button className={`mt-2 btn btn-${props.mode==='light'? 'primary' : 'outline-light'} mx-2`} onClick={handleClearClick}>
           Clear Text
         </button>
-        <button className={`btn btn-${props.mode==='light'? 'primary' : 'outline-light'}`} onClick={handleCopyClick}>
+        <button className={`mt-2 btn btn-${props.mode==='light'? 'primary' : 'outline-light'}`} onClick={handleCopyClick}>
           Copy Text
         </button>
-        <button className={`btn btn-${props.mode==='light'? 'primary' : 'outline-light'} mx-1`} onClick={handleReverseClick}>
+        <button className={`mt-2 btn btn-${props.mode==='light'? 'primary' : 'outline-light'} mx-2`} onClick={handleReverseClick}>
           Reverse Text
         </button>
         <button
-          className={`btn btn-${props.mode==='light'? 'primary' : 'outline-light'}`}
+          className={`mt-2 btn btn-${props.mode==='light'? 'primary' : 'outline-light'}`}
           onClick={handleSpeakClick}
           id="toggle"
         >
           Recite Text
         </button>
-        <button className={`btn btn-${props.mode==='light'? 'primary' : 'outline-light'} mx-1`} onClick={handleUndoClick}>
+        <button className={`mt-2 btn btn-${props.mode==='light'? 'primary' : 'outline-light'} mx-2`} onClick={handleUndoClick}>
           Undo Text
         </button>
-        <button className={`btn btn-${props.mode==='light'? 'primary' : 'outline-light'} my-1`} onClick={handleDownloadClick}>
+        <button className={`mt-2 btn btn-${props.mode==='light'? 'primary' : 'outline-light'}`} onClick={handleDownloadClick}>
           Download Text
         </button>
-        <button className={`btn btn-${props.mode==='light'? 'primary' : 'outline-light'} mx-1`} onClick={handleParagraphClick}>
+        <button className={`mt-2 btn btn-${props.mode==='light'? 'primary' : 'outline-light'} mx-2`} onClick={handleParagraphClick}>
           Paragraph Break
         </button>
-        <button className={`btn btn-${props.mode==='light'? 'primary' : 'outline-light'}`} onClick={handleOppositeClick}>
+        <button className={`mt-2 btn btn-${props.mode==='light'? 'primary' : 'outline-light'}`} onClick={handleOppositeClick}>
           Opposite Case
         </button>
         <button
-          className={`btn btn-${props.mode==='light'? 'primary' : 'outline-light'} mx-1`}
+          className={`mt-2 btn btn-${props.mode==='light'? 'primary' : 'outline-light'} mx-2`}
           onClick={handleCapitalizeSClick}
         >
           Capitalize Selected Text
         </button>
-        <button className={`btn btn-${props.mode==='light'? 'primary' : 'outline-light'}`} onClick={handleSearchClick}>
+        <button className={`mt-2 btn btn-${props.mode==='light'? 'primary' : 'outline-light'}`} onClick={handleSearchClick}>
           Search Text
         </button>
         <button
-          className={`btn btn-${props.mode==='light'? 'primary' : 'outline-light'} mx-1 my-1`}
+          className={`mt-2 btn btn-${props.mode==='light'? 'primary' : 'outline-light'} mx-2`}
           onClick={handleVowelClick}
         >
           Vowel Count
         </button>
-        <button className={`btn btn-${props.mode==='light'? 'primary' : 'outline-light'}`} onClick={handleReplaceClick}>
+        <button className={`mt-2 btn btn-${props.mode==='light'? 'primary' : 'outline-light'}`} onClick={handleReplaceClick}>
           Replace Text
         </button>
       </div>
